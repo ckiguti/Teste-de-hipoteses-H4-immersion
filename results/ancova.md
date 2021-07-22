@@ -49,7 +49,7 @@ Geiser C. Challco <geiser@alumni.usp.br>
 | non.gamified | upper     | pos.score |   6 | 6.667 |      7 |   5 |   8 | 1.033 | 0.422 | 1.084 | 0.75 | YES      |   -0.370 |   -1.372 |
 | NA           | NA        | pos.score |  29 | 8.034 |      8 |   5 |  10 | 1.375 | 0.255 | 0.523 | 2.00 | YES      |   -0.218 |   -0.852 |
 
-![](/home/rstudio/report/ancova/9332dee376aceb8c/results/ancova_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+![](ancova_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
 ## Checking of Assumptions
 
@@ -121,7 +121,7 @@ ggscatter(sdat[["pos.score"]], x=covar, y="pos.score", facet.by=between, short.p
 
     ## `geom_smooth()` using formula 'y ~ x'
 
-![](/home/rstudio/report/ancova/9332dee376aceb8c/results/ancova_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+![](ancova_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
 
 ### Assumption: Homogeneity of data distribution
 
@@ -147,7 +147,7 @@ Descriptive statistics of data with normal distribution
 | pos.score.3 | non.gamified | lower     | pos.score |   7 | 7.143 |      7 |   6 |   8 | 0.900 | 0.340 | 0.832 | 1.50 |
 | pos.score.4 | non.gamified | upper     | pos.score |   6 | 6.667 |      7 |   5 |   8 | 1.033 | 0.422 | 1.084 | 0.75 |
 
-![](/home/rstudio/report/ancova/9332dee376aceb8c/results/ancova_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
+![](ancova_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
 
 ## Computation of ANCOVA test and Pairwise Comparison
 
@@ -171,12 +171,12 @@ Descriptive statistics of data with normal distribution
 
 ### Descriptive Statistic of Estimated Marginal Means
 
-| var       | scenario     | immersion |   n | emmean |  mean | conf.low | conf.high |    sd | sd.emms | se.emms |
-|:----------|:-------------|:----------|----:|-------:|------:|---------:|----------:|------:|--------:|--------:|
-| pos.score | gamified     | lower     |   8 |  8.841 | 9.125 |    8.350 |     9.333 | 0.835 |   0.673 |   0.238 |
-| pos.score | gamified     | upper     |   8 |  8.886 | 8.750 |    8.404 |     9.368 | 1.035 |   0.660 |   0.233 |
-| pos.score | non.gamified | lower     |   7 |  6.931 | 7.143 |    6.412 |     7.450 | 0.900 |   0.665 |   0.251 |
-| pos.score | non.gamified | upper     |   6 |  7.111 | 6.667 |    6.532 |     7.690 | 1.033 |   0.687 |   0.281 |
+| var       | scenario     | immersion | pre.score | emmean | se.emms |  df | conf.low | conf.high | method       |   n |  mean | median | min | max |    sd | se.ds |    ci |  iqr | n.pre.score | mean.pre.score | median.pre.score | min.pre.score | max.pre.score | sd.pre.score | se.pre.score | ci.pre.score | iqr.pre.score | sd.emms |
+|:----------|:-------------|:----------|----------:|-------:|--------:|----:|---------:|----------:|:-------------|----:|------:|-------:|----:|----:|------:|------:|------:|-----:|------------:|---------------:|-----------------:|--------------:|--------------:|-------------:|-------------:|-------------:|--------------:|--------:|
+| pos.score | gamified     | lower     |     6.828 |  8.841 |   0.238 |  24 |    8.350 |     9.333 | Emmeans test |   8 | 9.125 |      9 |   8 |  10 | 0.835 | 0.295 | 0.698 | 1.25 |           8 |          7.250 |              7.5 |             6 |             8 |        0.886 |        0.313 |        0.741 |          1.25 |   0.673 |
+| pos.score | gamified     | upper     |     6.828 |  8.886 |   0.233 |  24 |    8.404 |     9.368 | Emmeans test |   8 | 8.750 |      9 |   7 |  10 | 1.035 | 0.366 | 0.865 | 1.25 |           8 |          6.625 |              7.0 |             5 |             8 |        0.916 |        0.324 |        0.766 |          1.00 |   0.660 |
+| pos.score | non.gamified | lower     |     6.828 |  6.931 |   0.251 |  24 |    6.412 |     7.450 | Emmeans test |   7 | 7.143 |      7 |   6 |   8 | 0.900 | 0.340 | 0.832 | 1.50 |           7 |          7.143 |              7.0 |             6 |             8 |        0.900 |        0.340 |        0.832 |          1.50 |   0.665 |
+| pos.score | non.gamified | upper     |     6.828 |  7.111 |   0.281 |  24 |    6.532 |     7.690 | Emmeans test |   6 | 6.667 |      7 |   5 |   8 | 1.033 | 0.422 | 1.084 | 0.75 |           6 |          6.167 |              6.5 |             4 |             8 |        1.472 |        0.601 |        1.545 |          1.75 |   0.687 |
 
 ### Ancova plots for the dependent variable “pos.score”
 
@@ -191,7 +191,7 @@ plots <- twoWayAncovaPlots(sdat[["pos.score"]], "pos.score", between
 plots[["scenario"]]
 ```
 
-![](/home/rstudio/report/ancova/9332dee376aceb8c/results/ancova_files/figure-gfm/unnamed-chunk-25-1.png)<!-- -->
+![](ancova_files/figure-gfm/unnamed-chunk-25-1.png)<!-- -->
 
 #### Plot for: `pos.score` \~ `immersion`
 
@@ -199,7 +199,7 @@ plots[["scenario"]]
 plots[["immersion"]]
 ```
 
-![](/home/rstudio/report/ancova/9332dee376aceb8c/results/ancova_files/figure-gfm/unnamed-chunk-26-1.png)<!-- -->
+![](ancova_files/figure-gfm/unnamed-chunk-26-1.png)<!-- -->
 
 ### Textual Report
 
